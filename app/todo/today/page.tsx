@@ -1,5 +1,8 @@
+
 export default function Page() {
     return (
-        <div>TEST</div>
+        <div>
+            Today
+        </div>
     );
 }

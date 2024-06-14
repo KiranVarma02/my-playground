@@ -3,7 +3,6 @@ import "../globals.css";
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils";
 import Navbar from "../components/Navbar/Navbar";
-import Todo from "../components/Todo/Todo";
 import Menu from "../components/Todo/Menu";
 
 const fontSans = FontSans({
@@ -24,14 +23,12 @@ export default function RootLayout({
   return (
         <div className="flex">
           <Navbar />
-
-            <div className="flex-1 relative...">
-              <div className="absolute top-0 right-0 ...">
+            <div className="grow">
+              <div className="grid justify-items-end">
                 <Menu />
               </div>
+              {children}
             </div>
-
-          {children}
         </div>
   );
 }
