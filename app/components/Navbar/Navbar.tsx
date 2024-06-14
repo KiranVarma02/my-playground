@@ -6,7 +6,7 @@ import MyProjects from './MyProjects'
 import NavbarItems from './NavbarItems'
 import AddTask from './AddTask'
 
-export const SidebarContext = React.createContext()
+export const SidebarContext = React.createContext<any>({} as any)
 
 function Navbar() {
 

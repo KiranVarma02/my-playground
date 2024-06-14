@@ -33,7 +33,7 @@ interface TEntry {
   folder?: TEntry[]
 }
 
-function expandable(entry, isExpanded) {
+function expandable(entry: any, isExpanded: any) {
   if (!entry.folder) {
     return
   }
