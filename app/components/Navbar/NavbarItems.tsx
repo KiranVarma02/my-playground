@@ -9,19 +9,19 @@ export default function NavbarItems() {
     return (
         <div className="space-y-2">
             <div className="flex">
-                <NavbarItem Icon={SearchIcon} content="Search" link="/today" />
+                <NavbarItem Icon={SearchIcon} content="Search" link="/todo/today" />
             </div>
             <div>
-                <NavbarItem Icon={InboxIcon} content="Inbox" link="/today" />
+                <NavbarItem Icon={InboxIcon} content="Inbox" link="/todo/today" />
             </div>
             <div>
                 <NavbarItem Icon={TodayIcon} content="Today" link="/todo/today" />
             </div>
             <div>
-                <NavbarItem Icon={UpcomingIcon} content="Upcoming" link="/today" />
+                <NavbarItem Icon={UpcomingIcon} content="Upcoming" link="/todo/today" />
             </div>
             <div>    
-                <NavbarItem Icon={FiltersLabelsIcon} content="Filters & Labels" link="/today" />
+                <NavbarItem Icon={FiltersLabelsIcon} content="Filters & Labels" link="/todo/today" />
             </div>
         </div>
     );
