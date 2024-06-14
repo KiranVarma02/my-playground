@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import { Inter as FontSans } from "next/font/google"
-
-import Navbar from "./components/Navbar/Navbar";
-import AddTodo from "./components/AddTodo";
 import { cn } from "@/lib/utils";
+import Navbar from "../components/Navbar/Navbar";
+import Todo from "../components/Todo/Todo";
+import Menu from "../components/Todo/Menu";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,10 +22,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn("bg-red-50", fontSans.variable)}>
-        {children}
-      </body>
-    </html>
+        <div className="flex">
+          <Navbar />
+
+            <div className="flex-1 relative...">
+              <div className="absolute top-0 right-0 ...">
+                <Menu />
+              </div>
+            </div>
+
+          {children}
+        </div>
   );
 }
