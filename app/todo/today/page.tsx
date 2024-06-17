@@ -11,7 +11,11 @@ export default function Page() {
 
     const AddTaskFormRender = () => {
         if (showAddTaskForm) {
-            return <AddTaskForm />
+            return (
+                <div className="px-20">
+                    <AddTaskForm />
+                </div>
+            )
         } else {
             return (
                 <div className="px-14">
