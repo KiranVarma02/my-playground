@@ -34,7 +34,7 @@ export default function Page() {
 
     return (
         <div className="h-screen">
-            <header className="font-bold text-2xl px-14 pb-14">
+            <header className="font-bold text-2xl px-20 pb-14">
                 Today
             </header>
 
