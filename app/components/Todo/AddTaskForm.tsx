@@ -1,4 +1,6 @@
 import { FormEvent } from "react";
+import IconAndText from "../Generic/IconAndText";
+import TodayIcon from "../Svg/TodayIcon";
 
 export default function AddTaskForm() {
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -18,6 +20,15 @@ export default function AddTaskForm() {
             <div className="flex flex-col pb-2">
                 <input type="text" name="taskName" placeholder="Task name" className="bg-inherit outline-none"/>
                 <input type="text" name="description" placeholder="Description" className="bg-inherit outline-none"/>
+
+                <div className="flex space-x-2 py-4">
+                    {/* <button type="button" className="bg-none hover:bg-red-200 rounded px-3 py-1 border border-gray-300 ">Today</button>
+                    <button type="button" className="bg-none hover:bg-red-200 rounded px-3 py-1 border border-gray-300 ">Priority</button>
+                    <button type="button" className="bg-none hover:bg-red-200 rounded px-3 py-1 border border-gray-300 ">Reminders</button> */}
+                    <IconAndText Icon={TodayIcon} content="Today" link="/todo/today"/>
+                    <IconAndText Icon={TodayIcon} content="Priority" link="/todo/today" />
+                    <IconAndText Icon={TodayIcon} content="Reminders" link="/todo/today" />
+                </div>
             </div>
 
             <div className="border-t border-gray-300 py-2"></div>

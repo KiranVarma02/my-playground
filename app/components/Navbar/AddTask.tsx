@@ -1,11 +1,11 @@
-import NavbarItem from "./NavbarItem"
+import IconAndText from "../Generic/IconAndText"
 import AddTaskPlusIcon from "../Svg/AddTaskPlusIcon"
 import SvgIcon from "../Svg/SvgIcon"
 
 function AddTask() {
   return (
     <div className="font-bold">
-      <NavbarItem Icon={AddTaskPlusIcon} content="Add task" link="/today"/>
+      <IconAndText Icon={AddTaskPlusIcon} content="Add task" link="/today"/>
     </div>
   )
 }

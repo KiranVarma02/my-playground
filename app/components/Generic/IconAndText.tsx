@@ -1,13 +1,13 @@
 import Link, { LinkProps } from "next/link"
 import SvgIcon from "../Svg/SvgIcon"
 
-function NavbarItem(
-  {Icon, content, link}:
-  {Icon: React.ComponentType, content: string, link: string}) {
+function IconAndText(
+  {Icon, content, link, css}:
+  {Icon: React.ComponentType, link: string, content?: string, css?: string}) {
 
   return (
     <Link href={link}>
-      <button className="flex hover:bg-red-200 space-x-2 rounded w-full p-1" >
+      <button className={css ? css : 'flex hover:bg-red-200 space-x-2 rounded w-full p-1'} >
         <SvgIcon Icon={Icon} />
         <span className="content-center">
             {content}
@@ -17,4 +17,4 @@ function NavbarItem(
   )
 }
 
-export default NavbarItem
+export default IconAndText
