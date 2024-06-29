@@ -1,6 +1,5 @@
 'use client'
 
-import NavbarItem from "@/app/components/Navbar/NavbarItem";
 import AddTaskPlusIcon from "@/app/components/Svg/AddTaskPlusIcon";
 import AddTaskForm from "@/app/components/Todo/AddTaskForm";
 import { useState } from "react";
