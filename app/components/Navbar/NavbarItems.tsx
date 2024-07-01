@@ -8,7 +8,7 @@ import FiltersLabelsIcon from "../Svg/FiltersLabelsIcon";
 export default function NavbarItems() {
     return (
         <div className="space-y-2">
-            <div className="flex">
+            <div>
                 <IconAndText Icon={SearchIcon} content="Search" link="/todo/today" />
             </div>
             <div>
