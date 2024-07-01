@@ -1,6 +1,9 @@
 import { FormEvent } from "react";
 import IconAndText from "../Generic/IconAndText";
 import TodayIcon from "../Svg/TodayIcon";
+import PersonIcon from "../Svg/PersonIcon";
+import FlagIcon from "../Svg/FlagIcon";
+import ReminderIcon from "../Svg/ReminderIcon";
 
 export default function AddTaskForm() {
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -15,6 +18,8 @@ export default function AddTaskForm() {
         const data = await response.json()
     }
 
+    const buttonStyle = "bg-none hover:bg-red-200 rounded px-3 py-1 border border-gray-300"
+
     return (
         <form onSubmit={onSubmit} className="editor mx-auto border border-gray-300 p-4 shadow-lg rounded-lg">
             <div className="flex flex-col pb-2">
@@ -22,12 +27,10 @@ export default function AddTaskForm() {
                 <input type="text" name="description" placeholder="Description" className="bg-inherit outline-none"/>
 
                 <div className="flex space-x-2 py-4">
-                    {/* <button type="button" className="bg-none hover:bg-red-200 rounded px-3 py-1 border border-gray-300 ">Today</button>
-                    <button type="button" className="bg-none hover:bg-red-200 rounded px-3 py-1 border border-gray-300 ">Priority</button>
-                    <button type="button" className="bg-none hover:bg-red-200 rounded px-3 py-1 border border-gray-300 ">Reminders</button> */}
-                    <IconAndText Icon={TodayIcon} content="Today" link="/todo/today"/>
-                    <IconAndText Icon={TodayIcon} content="Priority" link="/todo/today" />
-                    <IconAndText Icon={TodayIcon} content="Reminders" link="/todo/today" />
+                    <IconAndText Icon={TodayIcon} content="Today" link="/todo/today" style={buttonStyle} />
+                    <IconAndText Icon={PersonIcon} content="Assignee" link="/todo/today" style={buttonStyle} />
+                    <IconAndText Icon={FlagIcon} content="Priority" link="/todo/today" style={buttonStyle} />
+                    <IconAndText Icon={ReminderIcon} content="Reminders" link="/todo/today" style={buttonStyle} />
                 </div>
             </div>
 

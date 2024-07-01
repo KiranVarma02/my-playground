@@ -7,7 +7,7 @@ import Menu from "../components/Todo/Menu";
 
 const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-mono",
 })
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-        <div className="flex">
+        <div className="flex text-slate-700 antialiased text-sm">
           <Navbar />
             <div className="grow">
               <div className="grid justify-items-end">
