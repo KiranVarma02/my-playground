@@ -1,9 +1,9 @@
-import { InboxIcon } from "lucide-react";
 import IconAndText from "../Generic/IconAndText";
 import SearchIcon from "../Svg/SearchIcon";
 import TodayIcon from "../Svg/TodayIcon";
 import UpcomingIcon from "../Svg/UpcomingIcon";
 import FiltersLabelsIcon from "../Svg/FiltersLabelsIcon";
+import InboxIcon from "../Svg/InboxIcon";
 
 export default function NavbarItems() {
     return (
