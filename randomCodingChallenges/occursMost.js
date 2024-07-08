@@ -1,31 +1,39 @@
 function occursMost(str) {
-
     let obj = {}
 
-    for (let i = 0; i < str.length; i++) {
-        if (Object.keys(obj).includes(str[i])) {
+    for (let i = 0; i < str.length ; i++) {
+        if(Object.keys(obj).includes(str[i])) {
             obj[str[i]] = obj[str[i]] + 1
         } else {
             obj[str[i]] = 1
         }
     }
 
-    console.log(obj)
+    // return obj
 
-    let out = ''
-    let maxValue = 0
-    for (const key of Object.keys(obj)) {
-        if(obj[key] > maxValue) {
-            maxValue = obj[key]
-            out = key
+    let char
+    let maxCount = 0
+    for (let k in obj) {
+        if (obj[k] > maxCount) {
+            maxCount = obj[k]
+            char = k
         }
     }
 
-    return out
+    return { maxCount, char }
+
 }
 
 
 console.log(occursMost('aabbbaabac'))
+
+
+
+
+
+
+
+
 
 
 
