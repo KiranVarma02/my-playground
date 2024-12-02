@@ -20,6 +20,12 @@ export default function AddTaskForm() {
 
     const buttonStyle = "bg-none hover:bg-red-200 rounded px-3 py-1 border border-gray-300"
 
+    const handleCancelButton = (event: FormEvent<HTMLButtonElement>) => {
+        event.preventDefault()
+
+
+    }
+
     return (
         <form onSubmit={onSubmit} className="editor mx-auto border border-gray-300 p-4 shadow-lg rounded-lg">
             <div className="flex flex-col pb-2">
@@ -37,7 +43,7 @@ export default function AddTaskForm() {
             <div className="border-t border-gray-300 py-2"></div>
 
             <div className="space-x-2 flex justify-end">
-                <button type="submit" className="bg-red-100 hover:bg-red-200 rounded px-3 py-1">Cancel</button>
+                <button type="submit" className="bg-red-100 hover:bg-red-200 rounded px-3 py-1" onSubmit={handleCancelButton}>Cancel</button>
                 <button type="submit" disabled={true} className={`bg-red-300 ${false}hover:bg-red-400 rounded px-3 py-1`}>Add task</button>
             </div>
         </form>

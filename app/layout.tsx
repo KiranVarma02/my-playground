@@ -4,6 +4,7 @@ import { Inter as FontSans } from "next/font/google"
 
 import Navbar from "./components/Navbar/Navbar";
 import { cn } from "@/lib/utils";
+import ReduxProvider from "./store/provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("bg-red-50", fontSans.variable)}>
-        {children}
+        <ReduxProvider>
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );
