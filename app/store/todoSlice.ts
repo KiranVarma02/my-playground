@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { Todo } from "../types/todo";
-import exp from "constants";
 
 export interface TodoState {
     tasks: Todo[];
@@ -25,6 +24,7 @@ export const todoSlice = createSlice({
         }
     },
 });
+
 
 export const { addTask, deleteTask, updateTask } = todoSlice.actions;
 export default todoSlice.reducer;
