@@ -5,6 +5,7 @@ import { Inter as FontSans } from "next/font/google"
 import Navbar from "./components/Navbar/Navbar";
 import { cn } from "@/lib/utils";
 import ReduxProvider from "./store/provider";
+import connectDB from "./db/mongooseConnect";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -21,6 +22,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  //Connect to MongoDB
+  connectDB()
+  
   return (
     <html lang="en">
       <body className={cn("bg-red-50", fontSans.variable)}>

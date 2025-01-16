@@ -3,7 +3,6 @@
 import AddTaskPlusIcon from "@/app/components/Svg/AddTaskPlusIcon";
 import AddTaskForm from "@/app/components/Todo/AddTaskForm";
 import type { RootState } from "@/app/store/store";
-import { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { setData } from "@/app/store/genericSlice";
 
