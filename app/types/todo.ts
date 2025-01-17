@@ -1,8 +1,9 @@
+import { UUID } from "mongodb";
 import { Priority } from "./priority";
 
 export interface Todo {
-    id: string;
-    title: string;
+    id: UUID;
+    taskName: string;
     description: string;
     date: Date;
     priority: Priority

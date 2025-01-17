@@ -1,35 +1,31 @@
 import { UUID } from "mongodb";
 import mongoose from "mongoose";
+import { Todo } from "../types/todo";
 
-const todoSchema = new mongoose.Schema({
-  id: {
-    type: UUID,
-    required: true,
+const todoSchema = new mongoose.Schema<Todo>({
+    id: {
+        type: UUID,
+        required: true,
     },
-    title: {
+    taskName: {
         type: String,
         required: true,
     },
     description: {
         type: String,
-        required: true,
     },
     date: {
         type: Date,
-        required: true,
     },
     priority: {
         type: String,
-        required: true,
     },
     completed: {
         type: Boolean,
-        required: true,
     },
     reminders: {
         type: [Date],
-        required: true,
     },
 });
 
-export default mongoose.model("Todo", todoSchema);
+export default mongoose.models.Todo || mongoose.model<Todo>("Todo", todoSchema);
