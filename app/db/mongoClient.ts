@@ -26,4 +26,4 @@ async function dbConnect() {
 }
 dbConnect().catch(console.dir);
 
-export default dbConnect;
+export { dbConnect, mongoClient };

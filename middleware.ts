@@ -1,9 +1,11 @@
-import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
-import connectDB from "./app/db/mongooseConnect";
+export { auth as middleware } from "@/auth"
 
-async function middleware(req: NextRequest, event: NextFetchEvent) {
+// import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 
-    return NextResponse.next()
-}
+// async function middleware(req: NextRequest, event: NextFetchEvent) {
 
-export default middleware;
+//     return NextResponse.next()
+// }
+// export default middleware;
+
+

@@ -1,8 +1,13 @@
+import UserAvatar from "../../login/components/UserAvatar"
+
 function User() {
   return (
-    <button className="font-bold hover:bg-red-200 rounded p-2">
-      Kiran Varma
-    </button>
+    <div>
+      <button className="font-bold hover:bg-red-200 rounded p-2">
+        Kiran Varma
+      </button>
+      {/* <UserAvatar /> */}
+    </div>
   )
 }
 

@@ -1,10 +1,10 @@
 'use client'
 
-import AddTaskPlusIcon from "@/app/components/Svg/AddTaskPlusIcon";
 import AddTaskForm from "@/app/components/Todo/AddTaskForm";
 import type { RootState } from "@/app/store/store";
 import { useSelector, useDispatch } from 'react-redux';
 import { setData } from "@/app/store/genericSlice";
+import UserAvatar from "@/app/login/components/UserAvatar";
 
 export default function Page() {
 
